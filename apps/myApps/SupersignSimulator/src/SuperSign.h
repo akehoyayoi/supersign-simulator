@@ -23,6 +23,7 @@ public:
     virtual ~SuperSign();
     void input(int key);
     bool* simulate();
+    void setStage(std::shared_ptr<Stage> stage);
 };
 
 #endif /* SuperSign_hpp */

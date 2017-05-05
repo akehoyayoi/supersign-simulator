@@ -8,11 +8,12 @@
 
 #include "SuperSign.h"
 
+#include "Stage/Stage.h"
 #include "Stage/OpeningStage.h"
 
 SuperSign::SuperSign()
 {
-    currentStage = std::make_shared<OpeningStage>();
+    currentStage = std::make_shared<OpeningStage>(this);
 }
 
 SuperSign::~SuperSign()
@@ -27,4 +28,9 @@ void SuperSign::input(int key)
 bool* SuperSign::simulate()
 {
     return currentStage->simulate();
+}
+
+void SuperSign::setStage(std::shared_ptr<Stage> stage)
+{
+    currentStage = stage;
 }
