@@ -10,19 +10,14 @@
 #define SuperSign_hpp
 
 #include "const.h"
+#include <memory>
 
-enum class SceneStatus : int {
-    Opening,
-    Main,
-    GameOver,
-    Clear,
-};
+class Stage;
 
 class SuperSign {
 
 private:
-    bool switchArray[arraySize];
-    int animationCount;
+    std::shared_ptr<Stage> currentStage;
 public:
     SuperSign();
     virtual ~SuperSign();

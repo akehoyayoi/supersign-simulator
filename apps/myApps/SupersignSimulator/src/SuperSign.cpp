@@ -6,13 +6,13 @@
 //
 //
 
-#include "SuperSign.hpp"
+#include "SuperSign.h"
 
-#include "data.h"
+#include "Stage/OpeningStage.h"
 
 SuperSign::SuperSign()
-: animationCount(0)
 {
+    currentStage = std::make_shared<OpeningStage>();
 }
 
 SuperSign::~SuperSign()
@@ -21,14 +21,10 @@ SuperSign::~SuperSign()
 
 void SuperSign::input(int key)
 {
+    currentStage->input(key);
 }
 
 bool* SuperSign::simulate()
 {
-    std::vector<bool> a = anime[animationCount];
-    for(auto i = 0 ; i < arraySize ; i++) {
-        switchArray[i] = a[i];
-    }
-    animationCount = (animationCount + 1) % anime.size();
-    return switchArray;
+    return currentStage->simulate();
 }

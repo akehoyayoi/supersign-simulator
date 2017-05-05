@@ -15,8 +15,7 @@ void ofApp::draw(){
 
     auto switchArray = superSign.simulate();
     for(auto count = 0 ; count < arraySize ; count++) {
-
-        if(switchArray[count]) {
+        if(switchArray && switchArray[count]) {
             ofSetColor(255, 165, 0); // orange
         } else {
             ofSetColor(0, 0, 0);

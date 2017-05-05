@@ -2,9 +2,9 @@
 
 #include "ofMain.h"
 
-#include "SuperSign.hpp"
+#include "SuperSign.h"
 
-class ofApp : public ofBaseApp{
+class ofApp : public ofBaseApp {
 
 private:
     SuperSign superSign;
