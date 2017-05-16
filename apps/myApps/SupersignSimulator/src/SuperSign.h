@@ -14,6 +14,7 @@
 
 class Stage;
 
+// root class
 class SuperSign {
 
 private:

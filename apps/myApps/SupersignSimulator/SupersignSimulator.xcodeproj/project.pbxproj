@@ -12,6 +12,7 @@
 		CD7BC2D21EBC672800AD6D49 /* Stage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD7BC2D11EBC672800AD6D49 /* Stage.cpp */; };
 		CD7BC2D51EBC6FBA00AD6D49 /* GameOverStage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD7BC2D31EBC6FBA00AD6D49 /* GameOverStage.cpp */; };
 		CD7BC2D71EBC74AF00AD6D49 /* data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD7BC2D61EBC74AF00AD6D49 /* data.cpp */; };
+		CDCA31491ECB09D4007BDF58 /* ScrollStage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDCA31471ECB09D4007BDF58 /* ScrollStage.cpp */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
 		E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
@@ -58,6 +59,8 @@
 		CD7BC2D31EBC6FBA00AD6D49 /* GameOverStage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameOverStage.cpp; sourceTree = "<group>"; };
 		CD7BC2D41EBC6FBA00AD6D49 /* GameOverStage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverStage.h; sourceTree = "<group>"; };
 		CD7BC2D61EBC74AF00AD6D49 /* data.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = data.cpp; sourceTree = "<group>"; };
+		CDCA31471ECB09D4007BDF58 /* ScrollStage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ScrollStage.cpp; sourceTree = "<group>"; };
+		CDCA31481ECB09D4007BDF58 /* ScrollStage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollStage.h; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E4B69B5B0A3A1756003C02F2 /* SupersignSimulatorDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SupersignSimulatorDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
@@ -103,6 +106,8 @@
 				CD7BC2CC1EBC50CA00AD6D49 /* OpeningStage.cpp */,
 				CD7BC2D41EBC6FBA00AD6D49 /* GameOverStage.h */,
 				CD7BC2D31EBC6FBA00AD6D49 /* GameOverStage.cpp */,
+				CDCA31481ECB09D4007BDF58 /* ScrollStage.h */,
+				CDCA31471ECB09D4007BDF58 /* ScrollStage.cpp */,
 			);
 			path = Stage;
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 				CD7BC2D21EBC672800AD6D49 /* Stage.cpp in Sources */,
 				CD7BC2D71EBC74AF00AD6D49 /* data.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				CDCA31491ECB09D4007BDF58 /* ScrollStage.cpp in Sources */,
 				CD7BC2CE1EBC50CA00AD6D49 /* OpeningStage.cpp in Sources */,
 				CD7BC2C71EBC42C400AD6D49 /* SuperSign.cpp in Sources */,
 				CD7BC2D51EBC6FBA00AD6D49 /* GameOverStage.cpp in Sources */,

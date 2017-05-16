@@ -13,11 +13,9 @@
 
 #include "OpeningStage.h"
 
+#include "ScrollStage.h"
 
-std::vector<std::vector<bool>> openingAnime = {
-    hajime,hajime,hajime,hajime,hajime,
-    hajime,hajime,hajime,hajime,hajime,
-    kuusha,kuusha,kuusha,kuusha,kuusha};
+std::vector<std::vector<bool>> openingAnime = {hajime,kuusha,};
 
 void OpeningStage::input(int key)
 {
@@ -31,7 +29,7 @@ bool* OpeningStage::simulate()
     }
     animeCount++;
     if(animeCount >= openingAnime.size()) {
-        superSign()->setStage(std::make_shared<GameOverStage>(superSign()));
+        superSign()->setStage(std::make_shared<ScrollStage>(superSign()));
     }
     return switchArray;
 }

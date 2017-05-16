@@ -11,10 +11,7 @@
 #include "../SuperSign.h"
 #include "GameOverStage.h"
 
-std::vector<std::vector<bool>> gameOverAnime = {
-    hajime,hajime,hajime,hajime,hajime,
-    hajime,hajime,hajime,hajime,hajime,
-    gameOver,gameOver,gameOver,gameOver,gameOver};
+std::vector<std::vector<bool>> gameOverAnime = {hajime, gameOver,};
 
 void GameOverStage::input(int key)
 {
