@@ -5,7 +5,7 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofSetWindowShape(windowWidth * cellWidth, windowHeight * cellHeight);
-    ofSetFrameRate(2);
+    ofSetFrameRate(5);
     ofBackground(0, 0, 0);
     ofSetRectMode(OF_RECTMODE_CORNER);
 }
