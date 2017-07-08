@@ -21,7 +21,7 @@ public:
     : Stage(_superSign)
     , animeCount(0){};
     virtual void input(int key);
-    virtual std::array<std::array<bool, windowWidth>, windowHeight> simulate();
+    virtual std::array<std::array<bool, windowWidth>, windowHeight>& simulate();
 };
 
 #endif /* GameOverStage_hpp */

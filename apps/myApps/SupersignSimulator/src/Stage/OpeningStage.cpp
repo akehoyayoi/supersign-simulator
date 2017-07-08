@@ -18,12 +18,11 @@ void OpeningStage::input(int key)
 {
 }
 
-std::array<std::array<bool, windowWidth>, windowHeight> OpeningStage::simulate()
+std::array<std::array<bool, windowWidth>, windowHeight>& OpeningStage::simulate()
 {
-    auto current = openingAnime[animeCount];
     animeCount++;
     if(animeCount >= openingAnime.size()) {
         superSign()->setStage(std::make_shared<GameOverStage>(superSign()));
     }
-    return current;
+    return openingAnime[animeCount];
 }

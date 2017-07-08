@@ -25,7 +25,7 @@ public:
     SuperSign();
     virtual ~SuperSign();
     void input(int key);
-    std::array<std::array<bool, windowWidth>, windowHeight> simulate();
+    std::array<std::array<bool, windowWidth>, windowHeight>& simulate();
     void setStage(std::shared_ptr<Stage> stage);
 };
 
