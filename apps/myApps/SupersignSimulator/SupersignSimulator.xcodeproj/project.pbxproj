@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C146934E1F10ABE800A443B9 /* GameStage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C146934C1F10ABE800A443B9 /* GameStage.cpp */; };
+		C14693511F10B41100A443B9 /* Taxi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C146934F1F10B41100A443B9 /* Taxi.cpp */; };
 		CD7BC2C71EBC42C400AD6D49 /* SuperSign.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD7BC2C51EBC42C400AD6D49 /* SuperSign.cpp */; };
 		CD7BC2CE1EBC50CA00AD6D49 /* OpeningStage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD7BC2CC1EBC50CA00AD6D49 /* OpeningStage.cpp */; };
 		CD7BC2D21EBC672800AD6D49 /* Stage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD7BC2D11EBC672800AD6D49 /* Stage.cpp */; };
@@ -47,6 +49,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C146934C1F10ABE800A443B9 /* GameStage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameStage.cpp; sourceTree = "<group>"; };
+		C146934D1F10ABE800A443B9 /* GameStage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStage.h; sourceTree = "<group>"; };
+		C146934F1F10B41100A443B9 /* Taxi.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Taxi.cpp; sourceTree = "<group>"; };
+		C14693501F10B41100A443B9 /* Taxi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Taxi.h; sourceTree = "<group>"; };
 		CD7BC2C51EBC42C400AD6D49 /* SuperSign.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SuperSign.cpp; sourceTree = "<group>"; };
 		CD7BC2C61EBC42C400AD6D49 /* SuperSign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperSign.h; sourceTree = "<group>"; };
 		CD7BC2C81EBC443A00AD6D49 /* const.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = const.h; sourceTree = "<group>"; };
@@ -103,6 +109,10 @@
 				CD7BC2CC1EBC50CA00AD6D49 /* OpeningStage.cpp */,
 				CD7BC2D41EBC6FBA00AD6D49 /* GameOverStage.h */,
 				CD7BC2D31EBC6FBA00AD6D49 /* GameOverStage.cpp */,
+				C146934D1F10ABE800A443B9 /* GameStage.h */,
+				C146934C1F10ABE800A443B9 /* GameStage.cpp */,
+				C14693501F10B41100A443B9 /* Taxi.h */,
+				C146934F1F10B41100A443B9 /* Taxi.cpp */,
 			);
 			path = Stage;
 			sourceTree = "<group>";
@@ -240,10 +250,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C14693511F10B41100A443B9 /* Taxi.cpp in Sources */,
 				CD7BC2D21EBC672800AD6D49 /* Stage.cpp in Sources */,
 				CD7BC2D71EBC74AF00AD6D49 /* data.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				CD7BC2CE1EBC50CA00AD6D49 /* OpeningStage.cpp in Sources */,
+				C146934E1F10ABE800A443B9 /* GameStage.cpp in Sources */,
 				CD7BC2C71EBC42C400AD6D49 /* SuperSign.cpp in Sources */,
 				CD7BC2D51EBC6FBA00AD6D49 /* GameOverStage.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,

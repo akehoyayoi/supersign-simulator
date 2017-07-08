@@ -9,8 +9,6 @@
 #ifndef GameOverStage_hpp
 #define GameOverStage_hpp
 
-#include "../const.h"
-
 #include "Stage.h"
 
 class GameOverStage: public Stage {

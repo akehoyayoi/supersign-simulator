@@ -9,14 +9,11 @@
 #ifndef OpeningStage_hpp
 #define OpeningStage_hpp
 
-#include "../const.h"
-
 #include "Stage.h"
 
 class OpeningStage: public Stage {
 private:
     int animeCount;
-    bool switchArray[arraySize];
 public:
     OpeningStage(SuperSign* _superSign)
     : Stage(_superSign)

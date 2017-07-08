@@ -11,6 +11,7 @@
 
 #include "GameOverStage.h"
 #include "OpeningStage.h"
+#include "GameStage.h"
 
 std::array<std::array<std::array<bool, windowWidth>, windowHeight>, 2> openingAnime = {hajime,kuusha};
 
@@ -22,7 +23,7 @@ std::array<std::array<bool, windowWidth>, windowHeight>& OpeningStage::simulate(
 {
     animeCount++;
     if(animeCount >= openingAnime.size()) {
-        superSign()->setStage(std::make_shared<GameOverStage>(superSign()));
+        superSign()->setStage(std::make_shared<GameStage>(superSign()));
     }
     return openingAnime[animeCount];
 }
