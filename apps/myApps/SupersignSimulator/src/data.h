@@ -9,11 +9,11 @@
 #ifndef data_h
 #define data_h
 #include "const.h"
-#include <vector>
+#include <array>
 
-extern std::vector<bool> jissha;
-extern std::vector<bool> kuusha;
-extern std::vector<bool> gameOver;
-extern std::vector<bool> hajime;
+extern std::array<std::array<bool, windowWidth>, windowHeight> jissha;
+extern std::array<std::array<bool, windowWidth>, windowHeight> kuusha;
+extern std::array<std::array<bool, windowWidth>, windowHeight> gameOver;
+extern std::array<std::array<bool, windowWidth>, windowHeight> hajime;
 
 #endif /* data_h */

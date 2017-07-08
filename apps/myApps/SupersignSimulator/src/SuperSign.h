@@ -12,6 +12,8 @@
 #include "const.h"
 #include <memory>
 
+#include <array>
+
 class Stage;
 
 // root class
@@ -23,7 +25,7 @@ public:
     SuperSign();
     virtual ~SuperSign();
     void input(int key);
-    bool* simulate();
+    std::array<std::array<bool, windowWidth>, windowHeight> simulate();
     void setStage(std::shared_ptr<Stage> stage);
 };
 

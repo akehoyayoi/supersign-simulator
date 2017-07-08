@@ -9,6 +9,9 @@
 #ifndef Stage_h
 #define Stage_h
 
+#include "../const.h"
+#include <array>
+
 class SuperSign;
 
 class Stage {
@@ -18,7 +21,7 @@ public:
     Stage(SuperSign* __superSign);
     SuperSign* superSign();
     virtual void input(int key) = 0;
-    virtual bool* simulate() = 0;
+    virtual std::array<std::array<bool, windowWidth>, windowHeight> simulate() = 0;
 };
 
 #endif /* Stage_h */

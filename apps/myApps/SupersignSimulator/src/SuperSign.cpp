@@ -11,6 +11,10 @@
 #include "Stage/Stage.h"
 #include "Stage/OpeningStage.h"
 
+#include "const.h"
+#include <array>
+
+
 SuperSign::SuperSign()
 {
     currentStage = std::make_shared<OpeningStage>(this);
@@ -25,7 +29,7 @@ void SuperSign::input(int key)
     currentStage->input(key);
 }
 
-bool* SuperSign::simulate()
+std::array<std::array<bool, windowWidth>, windowHeight> SuperSign::simulate()
 {
     return currentStage->simulate();
 }

@@ -13,16 +13,17 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 
-    auto switchArray = superSign.simulate();
-    for(auto count = 0 ; count < arraySize ; count++) {
-        if(switchArray && switchArray[count]) {
-            ofSetColor(255, 165, 0); // orange
-        } else {
-            ofSetColor(0, 0, 0);
+    auto simulation = superSign.simulate();
+    for(auto row = 0 ; row < simulation.size() ; row++) {
+        auto rows = simulation.at(row);
+        for(auto col = 0 ; col < rows.size() ; col++) {
+            if(rows.at(col)) {
+                ofSetColor(255, 165, 0); // orange
+            } else {
+                ofSetColor(0, 0, 0);
+            }
+            ofDrawRectangle(col * cellWidth, row * cellHeight, cellWidth, cellHeight);
         }
-        const auto width = count % windowWidth;
-        const auto height = count / windowWidth;
-        ofDrawRectangle(width * cellWidth, height * cellHeight, cellWidth, cellHeight);
     }
 }
 

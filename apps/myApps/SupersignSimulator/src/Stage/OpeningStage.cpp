@@ -10,26 +10,20 @@
 #include "../SuperSign.h"
 
 #include "GameOverStage.h"
-
 #include "OpeningStage.h"
 
-#include "ScrollStage.h"
-
-std::vector<std::vector<bool>> openingAnime = {hajime,kuusha,};
+std::array<std::array<std::array<bool, windowWidth>, windowHeight>, 2> openingAnime = {hajime,kuusha};
 
 void OpeningStage::input(int key)
 {
 }
 
-bool* OpeningStage::simulate()
+std::array<std::array<bool, windowWidth>, windowHeight> OpeningStage::simulate()
 {
-    std::vector<bool> a = openingAnime[animeCount];
-    for(auto i = 0 ; i < arraySize ; i++) {
-        switchArray[i] = a[i];
-    }
+    auto current = openingAnime[animeCount];
     animeCount++;
     if(animeCount >= openingAnime.size()) {
-        superSign()->setStage(std::make_shared<ScrollStage>(superSign()));
+        superSign()->setStage(std::make_shared<GameOverStage>(superSign()));
     }
-    return switchArray;
+    return current;
 }

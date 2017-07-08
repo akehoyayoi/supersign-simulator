@@ -22,7 +22,7 @@ public:
     : Stage(_superSign)
     , animeCount(0){};
     virtual void input(int key);
-    virtual bool* simulate();
+    virtual std::array<std::array<bool, windowWidth>, windowHeight> simulate();
 };
 
 #endif /* OpeningStage_hpp */

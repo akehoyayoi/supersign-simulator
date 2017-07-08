@@ -11,19 +11,15 @@
 #include "../SuperSign.h"
 #include "GameOverStage.h"
 
-std::vector<std::vector<bool>> gameOverAnime = {hajime, gameOver,};
+std::array<std::array<std::array<bool, windowWidth>, windowHeight>, 2> gameOverAnime = {hajime, gameOver};
 
 void GameOverStage::input(int key)
 {
 }
 
-bool* GameOverStage::simulate()
+std::array<std::array<bool, windowWidth>, windowHeight> GameOverStage::simulate()
 {
-    std::vector<bool> a = gameOverAnime[animeCount];
-    for(auto i = 0 ; i < arraySize ; i++) {
-        switchArray[i] = a[i];
-    }
     animeCount = (animeCount + 1) % gameOverAnime.size();
-    return switchArray;
+    return gameOverAnime[animeCount];
 }
 
