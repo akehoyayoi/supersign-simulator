@@ -14,16 +14,28 @@
 #include "GameStage.h"
 
 std::array<std::array<std::array<bool, windowWidth>, windowHeight>, 2> openingAnime = {hajime,kuusha};
+std::array<std::array<std::array<bool, windowWidth>, windowHeight>, 2> startAnime = {hajime,start};
 
 void OpeningStage::input(int key)
 {
+    if(!isStart) {
+        isStart = true;
+        animeCount = 0;
+    }
+    
+    
 }
 
 std::array<std::array<bool, windowWidth>, windowHeight>& OpeningStage::simulate()
 {
-    animeCount++;
-    if(animeCount >= openingAnime.size()) {
-        superSign()->setStage(std::make_shared<GameStage>(superSign()));
+    if(isStart) {
+        animeCount = ++animeCount % startAnime.size();
+        if(animeCount == 0){
+            superSign()->setStage(std::make_shared<GameStage>(superSign()));
+        }
+        return startAnime[animeCount];
+    } else {
+        animeCount = ++animeCount % openingAnime.size();
+        return openingAnime[animeCount];
     }
-    return openingAnime[animeCount];
 }

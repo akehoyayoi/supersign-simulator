@@ -147,6 +147,22 @@ std::array<std::array<bool, windowWidth>, windowHeight> b4 = {{
     {{true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true}}
 }};
 
-
+std::array<std::array<bool, windowWidth>, windowHeight> start = {{
+    {{false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false}},
+    {{false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false}},
+    {{false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false}},
+    {{false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false}},
+    {{false,true,true,true,true,true,false,true,true,true,true,true,false,false,true,false,false,false,true,true,true,true,false,false,true,true,true,true,true,false}},
+    {{false,true,false,false,false,false,false,false,false,true,false,false,false,true,true,true,false,false,true,false,false,true,true,false,false,false,true,false,false,false}},
+    {{false,true,false,false,false,false,false,false,false,true,false,false,false,true,false,true,false,false,true,false,false,false,true,false,false,false,true,false,false,false}},
+    {{false,true,true,true,true,true,false,false,false,true,false,false,true,true,false,true,true,false,true,false,false,true,true,false,false,false,true,false,false,false}},
+    {{false,false,false,false,false,true,false,false,false,true,false,false,true,false,true,false,true,false,true,true,true,true,false,false,false,false,true,false,false,false}},
+    {{false,false,false,false,false,true,false,false,false,true,false,false,true,false,false,false,true,false,true,false,false,true,false,false,false,false,true,false,false,false}},
+    {{false,true,true,true,true,true,false,false,false,true,false,false,true,false,false,false,true,false,true,false,false,true,true,true,false,false,true,false,false,false}},
+    {{false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false}},
+    {{false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false}},
+    {{false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false}},
+    {{false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false}}
+}};
 
 

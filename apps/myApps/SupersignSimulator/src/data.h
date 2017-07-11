@@ -19,5 +19,6 @@ extern std::array<std::array<bool, windowWidth>, windowHeight> b1;
 extern std::array<std::array<bool, windowWidth>, windowHeight> b2;
 extern std::array<std::array<bool, windowWidth>, windowHeight> b3;
 extern std::array<std::array<bool, windowWidth>, windowHeight> b4;
+extern std::array<std::array<bool, windowWidth>, windowHeight> start;
 
 #endif /* data_h */

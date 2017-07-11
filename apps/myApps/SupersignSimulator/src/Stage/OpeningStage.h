@@ -14,10 +14,12 @@
 class OpeningStage: public Stage {
 private:
     int animeCount;
+    bool isStart;
 public:
     OpeningStage(SuperSign* _superSign)
     : Stage(_superSign)
-    , animeCount(0){};
+    , animeCount(0)
+    , isStart(false){};
     virtual void input(int key);
     virtual std::array<std::array<bool, windowWidth>, windowHeight>& simulate();
 };
