@@ -1,27 +1,29 @@
 //
-//  Taxi.hpp
+//  Enemy.hpp
 //  SupersignSimulator
 //
-//  Created by YOHEI OKAYA on 2017/07/08.
+//  Created by YOHEI OKAYA on 2017/07/11.
 //
 //
 
-#ifndef Taxi_hpp
-#define Taxi_hpp
+#ifndef Enemy_hpp
+#define Enemy_hpp
 
 #include "../const.h"
 #include <array>
 #include "OverlayCompoent.h"
 
 
-class Taxi : public OverlayCompoent {
+class Enemy : public OverlayCompoent {
 private:
-    int currentPosition;
+    int horizonPosition;
+    int verticalPosition;
     std::array<std::array<OverlapType, windowWidth>, windowHeight> current;
 public:
-    Taxi();
+    Enemy();
     virtual void input(int key);
     virtual std::array<std::array<OverlapType, windowWidth>, windowHeight>& simulate();
 };
 
-#endif /* Taxi_hpp */
+
+#endif /* Enemy_hpp */

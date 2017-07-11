@@ -11,11 +11,13 @@
 
 #include "Stage.h"
 #include "Taxi.h"
+#include "Enemy.h"
 
 class GameStage: public Stage {
 private:
     int animeCount;
     Taxi taxi;
+    Enemy enemy;
     std::array<std::array<bool, windowWidth>, windowHeight> current;
 public:
     GameStage(SuperSign* _superSign)
