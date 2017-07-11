@@ -22,8 +22,6 @@ void OpeningStage::input(int key)
         isStart = true;
         animeCount = 0;
     }
-    
-    
 }
 
 std::array<std::array<bool, windowWidth>, windowHeight>& OpeningStage::simulate()
