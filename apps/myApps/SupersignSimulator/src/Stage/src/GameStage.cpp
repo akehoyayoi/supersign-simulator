@@ -6,9 +6,9 @@
 //
 //
 
-#include "GameStage.h"
+#include "../inc/GameStage.h"
 
-#include "data.h"
+#include "../inc/data.h"
 
 std::array<std::array<std::array<DisplayInfo, windowWidth>, windowHeight>, 4> backgroudAnime = {b1,b2,b3,b4};
 

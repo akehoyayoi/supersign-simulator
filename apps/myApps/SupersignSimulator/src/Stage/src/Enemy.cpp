@@ -6,7 +6,7 @@
 //
 //
 
-#include "Enemy.h"
+#include "../inc/Enemy.h"
 #include <random>
 
 Enemy::Enemy()

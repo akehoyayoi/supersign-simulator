@@ -6,7 +6,7 @@
 //
 //
 
-#include "Stage.h"
+#include "../inc/Stage.h"
 
 Stage::Stage(SuperSign* __superSign)
 : _superSign(__superSign)

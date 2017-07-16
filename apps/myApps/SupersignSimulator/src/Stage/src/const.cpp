@@ -6,7 +6,7 @@
 //
 //
 
-#include "const.h"
+#include "../inc/const.h"
 
 bool operator==(const DisplayInfo& left, const DisplayInfo& right ) {
     return left.red == right.red && left.green == right.green && left.blue == right.blue;

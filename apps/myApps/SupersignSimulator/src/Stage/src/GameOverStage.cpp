@@ -7,9 +7,9 @@
 //
 
 
-#include "data.h"
-#include "SuperSign.h"
-#include "GameOverStage.h"
+#include "../inc/data.h"
+#include "../inc/SuperSign.h"
+#include "../inc/GameOverStage.h"
 
 std::array<std::array<std::array<DisplayInfo, windowWidth>, windowHeight>, 2> gameOverAnime = {hajime, gameOver};
 

@@ -6,12 +6,12 @@
 //
 //
 
-#include "data.h"
-#include "SuperSign.h"
+#include "../inc/data.h"
+#include "../inc/SuperSign.h"
 
-#include "GameOverStage.h"
-#include "OpeningStage.h"
-#include "GameStage.h"
+#include "../inc/GameOverStage.h"
+#include "../inc/OpeningStage.h"
+#include "../inc/GameStage.h"
 
 std::array<std::array<std::array<DisplayInfo, windowWidth>, windowHeight>, 2> openingAnime = {hajime,kuusha};
 std::array<std::array<std::array<DisplayInfo, windowWidth>, windowHeight>, 2> startAnime = {hajime,start};

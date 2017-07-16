@@ -6,12 +6,12 @@
 //
 //
 
-#include "SuperSign.h"
+#include "../inc/SuperSign.h"
 
-#include "Stage.h"
-#include "OpeningStage.h"
+#include "../inc/Stage.h"
+#include "../inc/OpeningStage.h"
 
-#include "const.h"
+#include "../inc/const.h"
 #include <array>
 
 

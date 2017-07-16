@@ -2,7 +2,7 @@
 
 #include "ofMain.h"
 
-#include "Stage/SuperSign.h"
+#include "Stage/inc/SuperSign.h"
 
 class ofApp : public ofBaseApp {
 
