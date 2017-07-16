@@ -11,7 +11,6 @@
 #include "const.h"
 #include <array>
 
-extern std::array<std::array<DisplayInfo, windowWidth>, windowHeight> jissha;
 extern std::array<std::array<DisplayInfo, windowWidth>, windowHeight> kuusha;
 extern std::array<std::array<DisplayInfo, windowWidth>, windowHeight> gameOver;
 extern std::array<std::array<DisplayInfo, windowWidth>, windowHeight> hajime;
