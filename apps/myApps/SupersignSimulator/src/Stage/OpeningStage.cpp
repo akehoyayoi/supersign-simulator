@@ -6,8 +6,8 @@
 //
 //
 
-#include "../data.h"
-#include "../SuperSign.h"
+#include "data.h"
+#include "SuperSign.h"
 
 #include "GameOverStage.h"
 #include "OpeningStage.h"

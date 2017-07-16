@@ -9,7 +9,7 @@
 #ifndef Stage_h
 #define Stage_h
 
-#include "../const.h"
+#include "const.h"
 #include <array>
 
 class SuperSign;

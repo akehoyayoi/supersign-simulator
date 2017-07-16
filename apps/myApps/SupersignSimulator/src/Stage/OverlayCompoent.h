@@ -9,7 +9,7 @@
 #ifndef OverlayCompoent_h
 #define OverlayCompoent_h
 
-#include "../const.h"
+#include "const.h"
 #include <array>
 
 class OverlayCompoent {

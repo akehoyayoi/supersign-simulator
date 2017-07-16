@@ -8,8 +8,8 @@
 
 #include "SuperSign.h"
 
-#include "Stage/Stage.h"
-#include "Stage/OpeningStage.h"
+#include "Stage.h"
+#include "OpeningStage.h"
 
 #include "const.h"
 #include <array>

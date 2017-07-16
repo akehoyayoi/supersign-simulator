@@ -1,6 +1,6 @@
 #include "ofApp.h"
 
-#include "const.h"
+#include "Stage/const.h"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
