@@ -29,7 +29,7 @@ void SuperSign::input(int key)
     currentStage->input(key);
 }
 
-std::array<std::array<bool, windowWidth>, windowHeight>& SuperSign::simulate()
+std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& SuperSign::simulate()
 {
     return currentStage->simulate();
 }

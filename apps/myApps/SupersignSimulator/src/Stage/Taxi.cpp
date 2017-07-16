@@ -20,7 +20,8 @@ void Taxi::input(int key)
     if(key == 358 && currentPosition < 22) currentPosition++;
 }
 
-std::array<std::array<OverlapType, windowWidth>, windowHeight>& Taxi::simulate()
+
+std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& Taxi::simulate()
 {
     for(auto row = 0 ; row < current.size() ; row++) {
         auto rows = current.at(row);
@@ -30,25 +31,25 @@ std::array<std::array<OverlapType, windowWidth>, windowHeight>& Taxi::simulate()
                 switch (row) {
                     case 12:
                         if(col == currentPosition || col == currentPosition + 8) {
-                            current.at(row).at(col) = OverlapType::False;
+                            current.at(row).at(col) = white;
                         } else {
-                            current.at(row).at(col) = OverlapType::True;
+                            current.at(row).at(col) = taxiColor;
                         }
                         break;
                     case 13:
                     case 14:
                         if(col == currentPosition || col == currentPosition + 8) {
-                            current.at(row).at(col) = OverlapType::True;
+                            current.at(row).at(col) = taxiColor;
                         } else {
-                            current.at(row).at(col) = OverlapType::False;
+                            current.at(row).at(col) = white;
                         }
                         break;
                     default:
-                        current.at(row).at(col) = OverlapType::Transparent;
+                        current.at(row).at(col) = white;
                         break;
                 }
             } else {
-                current.at(row).at(col) = OverlapType::Transparent;
+                current.at(row).at(col) = white;
             }
         }
         

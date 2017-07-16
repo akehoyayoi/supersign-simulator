@@ -9,16 +9,13 @@
 #ifndef OverlayCompoent_h
 #define OverlayCompoent_h
 
-enum OverlapType {
-    False,
-    True,
-    Transparent
-};
+#include "../const.h"
+#include <array>
 
 class OverlayCompoent {
 public:
     virtual void input(int key) = 0;
-    virtual std::array<std::array<OverlapType, windowWidth>, windowHeight>& simulate() = 0;
+    virtual std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& simulate() = 0;
 };
 
 

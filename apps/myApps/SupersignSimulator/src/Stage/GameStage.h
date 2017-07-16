@@ -18,13 +18,13 @@ private:
     int animeCount;
     Taxi taxi;
     Enemy enemy;
-    std::array<std::array<bool, windowWidth>, windowHeight> current;
+    std::array<std::array<DisplayInfo, windowWidth>, windowHeight> current;
 public:
     GameStage(SuperSign* _superSign)
     : Stage(_superSign)
     , animeCount(0){};
     virtual void input(int key);
-    virtual std::array<std::array<bool, windowWidth>, windowHeight>& simulate();
+    virtual std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& simulate();
 };
 
 

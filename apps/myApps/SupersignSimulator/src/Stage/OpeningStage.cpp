@@ -13,8 +13,8 @@
 #include "OpeningStage.h"
 #include "GameStage.h"
 
-std::array<std::array<std::array<bool, windowWidth>, windowHeight>, 2> openingAnime = {hajime,kuusha};
-std::array<std::array<std::array<bool, windowWidth>, windowHeight>, 2> startAnime = {hajime,start};
+std::array<std::array<std::array<DisplayInfo, windowWidth>, windowHeight>, 2> openingAnime = {hajime,kuusha};
+std::array<std::array<std::array<DisplayInfo, windowWidth>, windowHeight>, 2> startAnime = {hajime,start};
 
 void OpeningStage::input(int key)
 {
@@ -24,7 +24,7 @@ void OpeningStage::input(int key)
     }
 }
 
-std::array<std::array<bool, windowWidth>, windowHeight>& OpeningStage::simulate()
+std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& OpeningStage::simulate()
 {
     if(isStart) {
         animeCount = ++animeCount % startAnime.size();

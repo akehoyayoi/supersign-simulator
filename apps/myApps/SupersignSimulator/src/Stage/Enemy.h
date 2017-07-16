@@ -9,20 +9,17 @@
 #ifndef Enemy_hpp
 #define Enemy_hpp
 
-#include "../const.h"
-#include <array>
 #include "OverlayCompoent.h"
-
 
 class Enemy : public OverlayCompoent {
 private:
     int horizonPosition;
     int verticalPosition;
-    std::array<std::array<OverlapType, windowWidth>, windowHeight> current;
+    std::array<std::array<DisplayInfo, windowWidth>, windowHeight> current;
 public:
     Enemy();
     virtual void input(int key);
-    virtual std::array<std::array<OverlapType, windowWidth>, windowHeight>& simulate();
+    virtual std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& simulate();
 };
 
 

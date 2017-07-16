@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C12546ED1F1B169300F2600D /* const.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C12546EC1F1B169300F2600D /* const.cpp */; };
 		C146934E1F10ABE800A443B9 /* GameStage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C146934C1F10ABE800A443B9 /* GameStage.cpp */; };
 		C14693511F10B41100A443B9 /* Taxi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C146934F1F10B41100A443B9 /* Taxi.cpp */; };
 		C1D602DA1F14E1FF005D4A16 /* Enemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1D602D81F14E1FE005D4A16 /* Enemy.cpp */; };
@@ -50,6 +51,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C12546EC1F1B169300F2600D /* const.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = const.cpp; sourceTree = "<group>"; };
 		C146934C1F10ABE800A443B9 /* GameStage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameStage.cpp; sourceTree = "<group>"; };
 		C146934D1F10ABE800A443B9 /* GameStage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStage.h; sourceTree = "<group>"; };
 		C146934F1F10B41100A443B9 /* Taxi.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Taxi.cpp; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				CD7BC2C51EBC42C400AD6D49 /* SuperSign.cpp */,
 				CD7BC2C61EBC42C400AD6D49 /* SuperSign.h */,
 				CD7BC2C81EBC443A00AD6D49 /* const.h */,
+				C12546EC1F1B169300F2600D /* const.cpp */,
 				CD7BC2C91EBC467200AD6D49 /* data.h */,
 				CD7BC2D61EBC74AF00AD6D49 /* data.cpp */,
 			);
@@ -263,6 +266,7 @@
 				CD7BC2D71EBC74AF00AD6D49 /* data.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				CD7BC2CE1EBC50CA00AD6D49 /* OpeningStage.cpp in Sources */,
+				C12546ED1F1B169300F2600D /* const.cpp in Sources */,
 				C146934E1F10ABE800A443B9 /* GameStage.cpp in Sources */,
 				CD7BC2C71EBC42C400AD6D49 /* SuperSign.cpp in Sources */,
 				CD7BC2D51EBC6FBA00AD6D49 /* GameOverStage.cpp in Sources */,

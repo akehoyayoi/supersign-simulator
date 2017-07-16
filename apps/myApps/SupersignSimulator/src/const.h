@@ -9,10 +9,25 @@
 #ifndef const_h
 #define const_h
 
-const auto windowWidth = 30;
-const auto windowHeight = 15;
+const auto windowWidth = 32;
+const auto windowHeight = 16;
 const auto cellWidth = 40;
 const auto cellHeight = 40;
 const auto arraySize = windowWidth * windowHeight;
+
+struct DisplayInfo {
+    int red;
+    int green;
+    int blue;
+    int alpha;
+};
+
+bool operator==(const DisplayInfo& left, const DisplayInfo& right );
+bool operator!=(const DisplayInfo& left, const DisplayInfo& right );
+
+const extern DisplayInfo taxiColor;
+const extern DisplayInfo enemyColor;
+const extern DisplayInfo white;
+const extern DisplayInfo black;
 
 #endif /* const_h */

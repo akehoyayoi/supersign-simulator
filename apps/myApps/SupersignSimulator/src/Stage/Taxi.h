@@ -9,19 +9,16 @@
 #ifndef Taxi_hpp
 #define Taxi_hpp
 
-#include "../const.h"
-#include <array>
 #include "OverlayCompoent.h"
-
 
 class Taxi : public OverlayCompoent {
 private:
     int currentPosition;
-    std::array<std::array<OverlapType, windowWidth>, windowHeight> current;
+    std::array<std::array<DisplayInfo, windowWidth>, windowHeight> current;
 public:
     Taxi();
     virtual void input(int key);
-    virtual std::array<std::array<OverlapType, windowWidth>, windowHeight>& simulate();
+    virtual std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& simulate();
 };
 
 #endif /* Taxi_hpp */

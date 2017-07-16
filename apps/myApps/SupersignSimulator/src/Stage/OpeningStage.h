@@ -21,7 +21,7 @@ public:
     , animeCount(0)
     , isStart(false){};
     virtual void input(int key);
-    virtual std::array<std::array<bool, windowWidth>, windowHeight>& simulate();
+    virtual std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& simulate();
 };
 
 #endif /* OpeningStage_hpp */

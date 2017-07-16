@@ -10,14 +10,14 @@
 
 #include "../data.h"
 
-std::array<std::array<std::array<bool, windowWidth>, windowHeight>, 4> backgroudAnime = {b1,b2,b3,b4};
+std::array<std::array<std::array<DisplayInfo, windowWidth>, windowHeight>, 4> backgroudAnime = {b1,b2,b3,b4};
 
 void GameStage::input(int key)
 {
     taxi.input(key);
 }
 
-std::array<std::array<bool, windowWidth>, windowHeight>& GameStage::simulate()
+std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& GameStage::simulate()
 {
     animeCount = ++animeCount % backgroudAnime.size();
     current = backgroudAnime[animeCount];
@@ -30,11 +30,13 @@ std::array<std::array<bool, windowWidth>, windowHeight>& GameStage::simulate()
         for(auto col = 0 ; col < rows.size() ; col++) {
             auto tcol = trows.at(col);
             auto ecol = erows.at(col);
-            if(tcol != OverlapType::Transparent) {
-                current.at(row).at(col) = tcol == OverlapType::True;
+            
+            if(tcol != white) {
+                current.at(row).at(col) = tcol;
             }
-            if(ecol != OverlapType::Transparent) {
-                current.at(row).at(col) = ecol == OverlapType::True;
+            
+            if(ecol != white) {
+                current.at(row).at(col) = ecol;
             }
         }
     }

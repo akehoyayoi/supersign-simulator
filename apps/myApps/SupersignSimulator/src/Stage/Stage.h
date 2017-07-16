@@ -21,7 +21,7 @@ public:
     Stage(SuperSign* __superSign);
     SuperSign* superSign();
     virtual void input(int key) = 0;
-    virtual std::array<std::array<bool, windowWidth>, windowHeight>& simulate() = 0;
+    virtual std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& simulate() = 0;
 };
 
 #endif /* Stage_h */

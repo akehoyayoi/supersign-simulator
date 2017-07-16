@@ -20,7 +20,7 @@ void Enemy::input(int key)
 {
 }
 
-std::array<std::array<OverlapType, windowWidth>, windowHeight>& Enemy::simulate()
+std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& Enemy::simulate()
 {
     for(auto row = 0 ; row < current.size() ; row++) {
         auto rows = current.at(row);
@@ -28,9 +28,9 @@ std::array<std::array<OverlapType, windowWidth>, windowHeight>& Enemy::simulate(
             if(col == horizonPosition
                && verticalPosition - 3 <= row
                && row <= verticalPosition) {
-                current.at(row).at(col) = OverlapType::True;
+                current.at(row).at(col) = enemyColor;
             } else {
-                current.at(row).at(col) = OverlapType::Transparent;
+                current.at(row).at(col) = white;
             }
         }
     }
