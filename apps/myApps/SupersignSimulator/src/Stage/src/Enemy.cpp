@@ -41,7 +41,7 @@ std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& Enemy::simulate(
         std::random_device rd;
         std::mt19937 mt(rd());
         std::uniform_int_distribution<int> dice(0,6);
-        std::uniform_int_distribution<double> judge(0.0,1.0);
+        std::uniform_real_distribution<double> judge(0.0,1.0);
         if(judge(mt) > 0.5) {
             horizonPosition = 7 + dice(mt);
         } else {
