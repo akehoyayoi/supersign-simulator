@@ -13,7 +13,9 @@
 #include "../inc/OpeningStage.h"
 #include "../inc/GameOverStage.h"
 
-std::array<std::array<std::array<DisplayInfo, windowWidth>, windowHeight>, 3> gameOverAnime = {hajime, shidankin, man1000};
+std::array<std::array<std::array<DisplayInfo, windowWidth>, windowHeight>, 6> gameOverAnime = {
+    hajime, hajime, shidankin, shidankin, man1000, man1000
+};
 
 void GameOverStage::input(int key)
 {

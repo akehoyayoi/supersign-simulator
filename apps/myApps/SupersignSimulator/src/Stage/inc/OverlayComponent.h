@@ -6,17 +6,26 @@
 //
 //
 
-#ifndef OverlayCompoent_h
-#define OverlayCompoent_h
+#ifndef OverlayComponent_h
+#define OverlayComponent_h
 
 #include "const.h"
 #include <array>
 
-class OverlayCompoent {
+struct Rectangle {
+    int right;
+    int left;
+    int top;
+    int bottom;
+};
+
+class OverlayComponent {
 public:
+    struct Rectangle rectangle;
     virtual void input(int key) = 0;
     virtual std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& simulate() = 0;
+    bool inContact(struct Rectangle& r);
 };
 
 
-#endif /* OverlayCompoent_h */
+#endif /* OverlayComponent_h */

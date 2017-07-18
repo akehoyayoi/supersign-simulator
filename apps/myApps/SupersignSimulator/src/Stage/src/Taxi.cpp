@@ -23,6 +23,10 @@ void Taxi::input(int key)
 
 std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& Taxi::simulate()
 {
+    rectangle.left = currentPosition;
+    rectangle.right = currentPosition + 8;
+    rectangle.top = 12;
+    rectangle.bottom = 14;
     for(auto row = 0 ; row < current.size() ; row++) {
         auto rows = current.at(row);
         for(auto col = 0 ; col < rows.size() ; col++) {

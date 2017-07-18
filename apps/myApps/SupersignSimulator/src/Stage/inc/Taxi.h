@@ -9,9 +9,9 @@
 #ifndef Taxi_hpp
 #define Taxi_hpp
 
-#include "OverlayCompoent.h"
+#include "OverlayComponent.h"
 
-class Taxi : public OverlayCompoent {
+class Taxi : public OverlayComponent {
 private:
     int currentPosition;
     std::array<std::array<DisplayInfo, windowWidth>, windowHeight> current;

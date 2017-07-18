@@ -7,6 +7,8 @@
 //
 
 #include "../inc/GameStage.h"
+#include "../inc/GameOverStage.h"
+#include "../inc/SuperSign.h"
 
 #include "../inc/data.h"
 
@@ -42,6 +44,9 @@ std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& GameStage::simul
     }
     
     // TODO: 当たり判定
+    if(taxi.inContact(enemy.rectangle)) {
+        superSign()->setStage(std::make_shared<GameOverStage>(superSign()));
+    }
     
     // TODO: クリア判定
     

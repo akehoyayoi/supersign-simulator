@@ -9,9 +9,9 @@
 #ifndef Enemy_hpp
 #define Enemy_hpp
 
-#include "OverlayCompoent.h"
+#include "OverlayComponent.h"
 
-class Enemy : public OverlayCompoent {
+class Enemy : public OverlayComponent {
 private:
     int horizonPosition;
     int verticalPosition;

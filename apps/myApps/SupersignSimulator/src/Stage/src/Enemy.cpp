@@ -22,6 +22,10 @@ void Enemy::input(int key)
 
 std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& Enemy::simulate()
 {
+    rectangle.left = horizonPosition;
+    rectangle.right = horizonPosition;
+    rectangle.top = verticalPosition - 3;
+    rectangle.bottom = verticalPosition;
     for(auto row = 0 ; row < current.size() ; row++) {
         auto rows = current.at(row);
         for(auto col = 0 ; col < rows.size() ; col++) {
