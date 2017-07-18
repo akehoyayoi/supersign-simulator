@@ -40,5 +40,10 @@ std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& GameStage::simul
             }
         }
     }
+    
+    // TODO: 当たり判定
+    
+    // TODO: クリア判定
+    
     return current;
 }

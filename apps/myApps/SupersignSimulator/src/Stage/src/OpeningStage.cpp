@@ -9,7 +9,6 @@
 #include "../inc/data.h"
 #include "../inc/SuperSign.h"
 
-#include "../inc/GameOverStage.h"
 #include "../inc/OpeningStage.h"
 #include "../inc/GameStage.h"
 

@@ -9,9 +9,11 @@
 
 #include "../inc/data.h"
 #include "../inc/SuperSign.h"
+
+#include "../inc/OpeningStage.h"
 #include "../inc/GameOverStage.h"
 
-std::array<std::array<std::array<DisplayInfo, windowWidth>, windowHeight>, 2> gameOverAnime = {hajime, gameOver};
+std::array<std::array<std::array<DisplayInfo, windowWidth>, windowHeight>, 3> gameOverAnime = {hajime, shidankin, man1000};
 
 void GameOverStage::input(int key)
 {
@@ -19,7 +21,11 @@ void GameOverStage::input(int key)
 
 std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& GameOverStage::simulate()
 {
+    int oldCount = animeCount;
     animeCount = (animeCount + 1) % gameOverAnime.size();
+    if(animeCount == 0 && oldCount > animeCount) {
+        superSign()->setStage(std::make_shared<OpeningStage>(superSign()));
+    }
     return gameOverAnime[animeCount];
 }
 
