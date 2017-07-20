@@ -9,6 +9,20 @@
 #include "../inc/Enemy.h"
 #include <random>
 
+const auto enemyWidth = 3;
+const auto enemyHeight = 8;
+
+std::array<std::array<DisplayInfo, enemyWidth>, enemyHeight> enemy = {{
+    {{{217, 234, 211, 255},{217, 234, 211, 255},{217, 234, 211, 255}}},
+    {{{0, 255, 0, 255},{217, 234, 211, 255},{0, 255, 0, 255}}},
+    {{{0, 255, 0, 255},{217, 234, 211, 255},{0, 255, 0, 255}}},
+    {{{0, 255, 0, 255},{217, 234, 211, 255},{0, 255, 0, 255}}},
+    {{{217, 234, 211, 255},{0, 255, 0, 255},{217, 234, 211, 255}}},
+    {{{217, 234, 211, 255},{217, 234, 211, 255},{217, 234, 211, 255}}},
+    {{{217, 234, 211, 255},{0, 255, 0, 255},{217, 234, 211, 255}}},
+    {{{217, 234, 211, 255},{0, 255, 0, 255},{217, 234, 211, 255}}}
+}};
+
 Enemy::Enemy()
 : horizonPosition(7)
 , verticalPosition(0)
@@ -23,34 +37,36 @@ void Enemy::input(int key)
 std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& Enemy::simulate()
 {
     rectangle.left = horizonPosition;
-    rectangle.right = horizonPosition;
-    rectangle.top = verticalPosition - 3;
+    rectangle.right = horizonPosition + enemyWidth;
+    rectangle.top = verticalPosition - enemyHeight;
     rectangle.bottom = verticalPosition;
     for(auto row = 0 ; row < current.size() ; row++) {
         auto rows = current.at(row);
         for(auto col = 0 ; col < rows.size() ; col++) {
-            if(col == horizonPosition
-               && verticalPosition - 3 <= row
-               && row <= verticalPosition) {
-                current.at(row).at(col) = enemyColor;
+            auto enemyCol = col - rectangle.left;
+            auto enemyRow = row - rectangle.top;
+            if(rectangle.left <= col
+               && col < rectangle.right
+               && rectangle.top <= row
+               && row < rectangle.bottom
+               && 0 <= enemyCol
+               && enemyCol < enemyWidth
+               && 0 <= enemyRow
+               && enemyRow < enemyHeight) {
+                current.at(row).at(col) = enemy.at(enemyRow).at(enemyCol);
             } else {
                 current.at(row).at(col) = white;
             }
         }
     }
     verticalPosition ++;
-    if(verticalPosition > 18) {
+    if(verticalPosition > windowHeight + enemyHeight) {
         verticalPosition = 0;
-        // 7 - 14, 18 - 24
+        // 6 - 24
         std::random_device rd;
         std::mt19937 mt(rd());
-        std::uniform_int_distribution<int> dice(0,6);
-        std::uniform_real_distribution<double> judge(0.0,1.0);
-        if(judge(mt) > 0.5) {
-            horizonPosition = 7 + dice(mt);
-        } else {
-            horizonPosition = 18 + dice(mt);
-        }
+        std::uniform_int_distribution<int> dice(6,24);
+        horizonPosition = dice(mt);
     }
     return current;
 }

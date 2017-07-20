@@ -11,8 +11,8 @@
 
 bool OverlayComponent::inContact(struct Rectangle& r)
 {
-    return rectangle.left <= r.right
+    return rectangle.left < r.right
     && r.left < rectangle.right
-    && rectangle.top <= r.bottom
+    && rectangle.top < r.bottom
     && r.top < rectangle.bottom;
 }
