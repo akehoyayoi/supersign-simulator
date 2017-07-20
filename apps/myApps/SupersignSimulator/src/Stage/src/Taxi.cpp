@@ -8,6 +8,17 @@
 
 #include "../inc/Taxi.h"
 
+const auto taxiWidth = 8;
+const auto taxiHeight = 4;
+const auto taxiTop = 12;
+
+std::array<std::array<DisplayInfo, taxiWidth>, taxiHeight> taxi = {{
+    {{{255, 255, 255, 255},{255, 255, 0, 255},{255, 255, 0, 255},{255, 255, 0, 255},{255, 255, 0, 255},{255, 255, 0, 255},{255, 255, 0, 255},{255, 255, 255, 255}}},
+    {{{255, 255, 0, 255},{255, 255, 0, 255},{255, 255, 0, 255},{255, 255, 0, 255},{255, 255, 0, 255},{255, 255, 0, 255},{255, 255, 0, 255},{255, 255, 0, 255}}},
+    {{{255, 255, 0, 255},{255, 255, 0, 255},{255, 255, 0, 255},{255, 255, 0, 255},{255, 255, 0, 255},{255, 255, 0, 255},{255, 255, 0, 255},{255, 255, 0, 255}}},
+    {{{255, 255, 0, 255},{255, 255, 0, 255},{255, 255, 0, 255},{0, 0, 255, 255},{0, 0, 255, 255},{255, 255, 0, 255},{255, 255, 0, 255},{255, 255, 0, 255}}}
+}};
+
 Taxi::Taxi()
 : currentPosition(3)
 {
@@ -24,34 +35,19 @@ void Taxi::input(int key)
 std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& Taxi::simulate()
 {
     rectangle.left = currentPosition;
-    rectangle.right = currentPosition + 8;
-    rectangle.top = 12;
-    rectangle.bottom = 14;
+    rectangle.right = currentPosition + taxiWidth;
+    rectangle.top = taxiTop;
+    rectangle.bottom = taxiTop + taxiHeight;
     for(auto row = 0 ; row < current.size() ; row++) {
         auto rows = current.at(row);
         for(auto col = 0 ; col < rows.size() ; col++) {
-            if(currentPosition <= col
-               && col <= currentPosition + 8) {
-                switch (row) {
-                    case 12:
-                        if(col == currentPosition || col == currentPosition + 8) {
-                            current.at(row).at(col) = white;
-                        } else {
-                            current.at(row).at(col) = taxiColor;
-                        }
-                        break;
-                    case 13:
-                    case 14:
-                        if(col == currentPosition || col == currentPosition + 8) {
-                            current.at(row).at(col) = taxiColor;
-                        } else {
-                            current.at(row).at(col) = white;
-                        }
-                        break;
-                    default:
-                        current.at(row).at(col) = white;
-                        break;
-                }
+            if(rectangle.left <= col
+               && col < rectangle.right
+               && rectangle.top <= row
+               && row < rectangle.bottom) {
+                auto taxiCol = col - rectangle.left;
+                auto taxiRow = row - rectangle.top;
+                current.at(row).at(col) = taxi.at(taxiRow).at(taxiCol);
             } else {
                 current.at(row).at(col) = white;
             }
