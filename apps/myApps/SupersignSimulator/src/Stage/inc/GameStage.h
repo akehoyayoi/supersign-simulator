@@ -12,17 +12,17 @@
 #include "Stage.h"
 #include "Taxi.h"
 #include "Enemy.h"
+#include <vector>
 
 class GameStage: public Stage {
 private:
     int animeCount;
-    Taxi taxi;
-    Enemy enemy;
     std::array<std::array<DisplayInfo, windowWidth>, windowHeight> current;
+    std::vector<std::shared_ptr<OverlayComponent>> overlays;
+    void gameOver();
+    bool inGame;
 public:
-    GameStage(SuperSign* _superSign)
-    : Stage(_superSign)
-    , animeCount(0){};
+    GameStage(SuperSign* _superSign);
     virtual void input(int key);
     virtual std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& simulate();
 };
