@@ -8,7 +8,9 @@
 
 #include "../inc/Explosion.h"
 #include "../inc/GameStage.h"
+#include "../inc/GameClearStage.h"
 #include "../inc/GameOverStage.h"
+#include "../inc/Gauge.h"
 #include "../inc/SuperSign.h"
 
 #include "../inc/data.h"
@@ -24,6 +26,8 @@ GameStage::GameStage(SuperSign* _superSign)
 {
     overlays.push_back(std::make_shared<Taxi>());
     overlays.push_back(std::make_shared<Enemy>());
+    std::function<void()> funcGameClear = std::bind(&GameStage::gameClear, this);
+    overlays.push_back(std::make_shared<Gauge>(funcGameClear));
 };
 
 
@@ -52,7 +56,7 @@ std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& GameStage::simul
         }
     }
 
-    if(overlays.size() < 2) return current;
+    if(overlays.size() < 3) return current;
     
     auto taxi = overlays.at(0);
     auto enemy = overlays.at(1);
@@ -62,9 +66,6 @@ std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& GameStage::simul
         std::function<void()> funcGameOver = std::bind(&GameStage::gameOver, this);
         overlays.push_back(std::make_shared<Explosion>(r.left, r.top, funcGameOver));
     }
-    
-    // TODO: クリア判定
-    
     return current;
 }
 
@@ -74,3 +75,7 @@ void GameStage::gameOver()
     superSign()->setStage(std::make_shared<GameOverStage>(superSign()));
 }
 
+void GameStage::gameClear()
+{
+    superSign()->setStage(std::make_shared<GameClearStage>(superSign()));
+}

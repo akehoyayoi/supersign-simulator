@@ -20,4 +20,7 @@ const DisplayInfo taxiColor     = {255, 255,   0, 255};
 const DisplayInfo enemyColor    = {255,   0,   0, 255};
 const DisplayInfo white         = {255, 255, 255, 255};
 const DisplayInfo black         = {  0,   0,   0, 255};
+const DisplayInfo green         = {  0, 255,   0, 255};
+const DisplayInfo red           = {255,   0,   0, 255};
+
 

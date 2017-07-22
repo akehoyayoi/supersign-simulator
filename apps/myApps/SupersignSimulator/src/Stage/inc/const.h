@@ -29,5 +29,7 @@ const extern DisplayInfo taxiColor;
 const extern DisplayInfo enemyColor;
 const extern DisplayInfo white;
 const extern DisplayInfo black;
+const extern DisplayInfo green;
+const extern DisplayInfo red;
 
 #endif /* const_h */

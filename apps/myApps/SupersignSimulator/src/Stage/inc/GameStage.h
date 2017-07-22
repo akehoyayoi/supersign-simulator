@@ -20,6 +20,7 @@ private:
     std::array<std::array<DisplayInfo, windowWidth>, windowHeight> current;
     std::vector<std::shared_ptr<OverlayComponent>> overlays;
     void gameOver();
+    void gameClear();
     bool inGame;
 public:
     GameStage(SuperSign* _superSign);
