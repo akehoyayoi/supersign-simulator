@@ -13,6 +13,7 @@
 #include "Taxi.h"
 #include "Enemy.h"
 #include <vector>
+#include <memory>
 
 class GameStage: public Stage {
 private:

@@ -36,5 +36,6 @@ std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& SuperSign::simul
 
 void SuperSign::setStage(std::shared_ptr<Stage> stage)
 {
+    oldStage = currentStage;
     currentStage = stage;
 }

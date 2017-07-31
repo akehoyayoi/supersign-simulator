@@ -15,9 +15,7 @@ class GameOverStage: public Stage {
 private:
     int animeCount;
 public:
-    GameOverStage(SuperSign* _superSign)
-    : Stage(_superSign)
-    , animeCount(0){};
+    GameOverStage(SuperSign* _superSign);
     virtual void input(int key);
     virtual std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& simulate();
 };

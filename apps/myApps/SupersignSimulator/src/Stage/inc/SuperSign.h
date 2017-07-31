@@ -21,6 +21,7 @@ class SuperSign {
 
 private:
     std::shared_ptr<Stage> currentStage;
+    std::shared_ptr<Stage> oldStage;
 public:
     SuperSign();
     virtual ~SuperSign();

@@ -70,6 +70,13 @@ std::array<std::array<DisplayInfo, windowWidth>, windowHeight> gameOver = {{
     {{{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255}}}
 }};
 
+GameOverStage::GameOverStage(SuperSign* _superSign)
+: Stage(_superSign)
+, animeCount(0)
+{
+};
+
+
 std::array<std::array<std::array<DisplayInfo, windowWidth>, windowHeight>, 10> gameOverAnime = {
     hajime, hajime, shidankin, shidankin, akai, akai, gameOver, gameOver, gameOver, gameOver
 };
