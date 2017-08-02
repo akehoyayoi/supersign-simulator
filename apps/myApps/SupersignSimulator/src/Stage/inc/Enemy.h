@@ -13,11 +13,12 @@
 
 class Enemy : public OverlayComponent {
 private:
+    int basePosition;
     int horizonPosition;
     int verticalPosition;
     std::array<std::array<DisplayInfo, windowWidth>, windowHeight> current;
 public:
-    Enemy();
+    Enemy(int basePosition);
     virtual void input(int key);
     virtual std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& simulate();
 };

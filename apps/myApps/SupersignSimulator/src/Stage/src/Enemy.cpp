@@ -9,25 +9,34 @@
 #include "../inc/Enemy.h"
 #include <random>
 
-const auto enemyWidth = 3;
+const auto enemyWidth = 4;
 const auto enemyHeight = 8;
 
 std::array<std::array<DisplayInfo, enemyWidth>, enemyHeight> enemy = {{
-    {{{0, 255, 0, 255},{0, 255, 0, 255},{0, 255, 0, 255}}},
-    {{{0, 255, 0, 255},{0, 255, 0, 255},{0, 255, 0, 255}}},
-    {{{0, 255, 0, 255},{0, 255, 0, 255},{0, 255, 0, 255}}},
-    {{{0, 255, 0, 255},{0, 255, 0, 255},{0, 255, 0, 255}}},
-    {{{0, 255, 0, 255},{0, 255, 0, 255},{0, 255, 0, 255}}},
-    {{{0, 255, 0, 255},{0, 255, 0, 255},{0, 255, 0, 255}}},
-    {{{0, 255, 0, 255},{0, 255, 0, 255},{0, 255, 0, 255}}},
-    {{{0, 255, 0, 255},{0, 255, 0, 255},{0, 255, 0, 255}}},
+    {{{0, 255, 0, 255},{0, 255, 0, 255},{0, 255, 0, 255},{0, 255, 0, 255}}},
+    {{{0, 255, 0, 255},{0, 255, 0, 255},{0, 255, 0, 255},{0, 255, 0, 255}}},
+    {{{0, 255, 0, 255},{0, 255, 0, 255},{0, 255, 0, 255},{0, 255, 0, 255}}},
+    {{{0, 255, 0, 255},{0, 255, 0, 255},{0, 255, 0, 255},{0, 255, 0, 255}}},
+    {{{0, 255, 0, 255},{0, 255, 0, 255},{0, 255, 0, 255},{0, 255, 0, 255}}},
+    {{{0, 255, 0, 255},{0, 255, 0, 255},{0, 255, 0, 255},{0, 255, 0, 255}}},
+    {{{0, 255, 0, 255},{0, 255, 0, 255},{0, 255, 0, 255},{0, 255, 0, 255}}},
+    {{{0, 255, 0, 255},{0, 255, 0, 255},{0, 255, 0, 255},{0, 255, 0, 255}}}
 }};
 
-Enemy::Enemy()
-: horizonPosition(7)
+int randomPoint()
+{
+    // 6 - 24
+    std::random_device rd;
+    std::mt19937 mt(rd());
+    std::uniform_int_distribution<int> dice(2,8);
+    return dice(mt);
+}
+
+Enemy::Enemy(int basePosition)
+: basePosition(basePosition)
 , verticalPosition(0)
 {
-    
+    horizonPosition = basePosition + randomPoint();
 }
 
 void Enemy::input(int key)
@@ -62,11 +71,7 @@ std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& Enemy::simulate(
     verticalPosition ++;
     if(verticalPosition > windowHeight + enemyHeight) {
         verticalPosition = 0;
-        // 6 - 24
-        std::random_device rd;
-        std::mt19937 mt(rd());
-        std::uniform_int_distribution<int> dice(6,24);
-        horizonPosition = dice(mt);
+        horizonPosition = basePosition + randomPoint();
     }
     return current;
 }
