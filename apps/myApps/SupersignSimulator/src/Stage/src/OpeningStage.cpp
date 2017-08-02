@@ -50,7 +50,7 @@ std::array<std::array<DisplayInfo, windowWidth>, windowHeight> kuusha = {{
     {{{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255},{0, 0, 0, 255}}}
 }};
 
-std::array<std::array<std::array<DisplayInfo, windowWidth>, windowHeight>, 2> openingAnime = {hajime,kuusha};
+std::array<std::array<std::array<DisplayInfo, windowWidth>, windowHeight>, 2> openingAnime = {kuusha,kuusha};
 std::array<std::array<std::array<DisplayInfo, windowWidth>, windowHeight>, 2> startAnime = {hajime,start};
 
 void OpeningStage::input(int key)
