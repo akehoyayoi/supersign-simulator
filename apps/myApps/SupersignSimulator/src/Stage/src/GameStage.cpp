@@ -101,9 +101,9 @@ GameStage::GameStage(SuperSign* _superSign)
 , inGame(true)
 {
     overlays.push_back(std::make_shared<Taxi>());
-    overlays.push_back(std::make_shared<Enemy>(0));
-    overlays.push_back(std::make_shared<Enemy>(10));
-    overlays.push_back(std::make_shared<Enemy>(20));
+    overlays.push_back(std::make_shared<Enemy>(0, 10));
+    overlays.push_back(std::make_shared<Enemy>(10, 10));
+    overlays.push_back(std::make_shared<Enemy>(20, 10));
     std::function<void()> funcGameClear = std::bind(&GameStage::gameClear, this);
     overlays.push_back(std::make_shared<Gauge>(funcGameClear));
 };
@@ -135,26 +135,14 @@ std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& GameStage::simul
     }
     
     auto taxi = overlays.at(0);
-    auto enemy1 = overlays.at(1);
-    auto enemy2 = overlays.at(2);
-    auto enemy3 = overlays.at(3);
-    if(taxi->inContact(enemy1->rectangle) && inGame) {
-        inGame = false;
-        auto r = enemy1->rectangle;
-        std::function<void()> funcGameOver = std::bind(&GameStage::gameOver, this);
-        overlays.push_back(std::make_shared<Explosion>(r.left, r.top, funcGameOver));
-    }
-    if(taxi->inContact(enemy2->rectangle) && inGame) {
-        inGame = false;
-        auto r = enemy2->rectangle;
-        std::function<void()> funcGameOver = std::bind(&GameStage::gameOver, this);
-        overlays.push_back(std::make_shared<Explosion>(r.left, r.top, funcGameOver));
-    }
-    if(taxi->inContact(enemy3->rectangle) && inGame) {
-        inGame = false;
-        auto r = enemy3->rectangle;
-        std::function<void()> funcGameOver = std::bind(&GameStage::gameOver, this);
-        overlays.push_back(std::make_shared<Explosion>(r.left, r.top, funcGameOver));
+    for(auto overlay: overlays) {
+        auto enemy = std::dynamic_pointer_cast<Enemy>(overlay);
+        if(enemy != nullptr && taxi->inContact(enemy->rectangle) && inGame) {
+            inGame = false;
+            auto r = enemy->rectangle;
+            std::function<void()> funcGameOver = std::bind(&GameStage::gameOver, this);
+            overlays.push_back(std::make_shared<Explosion>(r.left, r.top, funcGameOver));
+        }
     }
     return current;
 }

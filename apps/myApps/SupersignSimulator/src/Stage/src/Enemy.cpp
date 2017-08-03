@@ -23,20 +23,21 @@ std::array<std::array<DisplayInfo, enemyWidth>, enemyHeight> enemy = {{
     {{{0, 255, 0, 255},{0, 255, 0, 255},{0, 255, 0, 255},{0, 255, 0, 255}}}
 }};
 
-int randomPoint()
+int randomPoint(int minimum, int maximum)
 {
-    // 6 - 24
     std::random_device rd;
     std::mt19937 mt(rd());
-    std::uniform_int_distribution<int> dice(2,8);
+    std::uniform_int_distribution<int> dice(minimum, maximum);
     return dice(mt);
 }
 
-Enemy::Enemy(int basePosition)
+Enemy::Enemy(int basePosition, int band)
 : basePosition(basePosition)
+, minimum(band * 0.2)
+, maximum(band * 0.8)
 , verticalPosition(0)
 {
-    horizonPosition = basePosition + randomPoint();
+    horizonPosition = basePosition + randomPoint(minimum, maximum);
 }
 
 void Enemy::input(int key)
@@ -71,7 +72,7 @@ std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& Enemy::simulate(
     verticalPosition ++;
     if(verticalPosition > windowHeight + enemyHeight) {
         verticalPosition = 0;
-        horizonPosition = basePosition + randomPoint();
+        horizonPosition = basePosition + randomPoint(minimum, maximum);
     }
     return current;
 }
