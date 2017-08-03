@@ -10,6 +10,7 @@
 #include "../inc/GameStage.h"
 #include "../inc/GameClearStage.h"
 #include "../inc/GameOverStage.h"
+#include "../inc/GameWaypointStage.h"
 #include "../inc/Gauge.h"
 #include "../inc/SuperSign.h"
 
@@ -156,5 +157,9 @@ void GameStage::gameOver()
 
 void GameStage::gameClear()
 {
-    superSign()->setStage(std::make_shared<GameClearStage>(superSign()));
+    if(overlays.size() > 3) { // difficulty > 1
+        superSign()->setStage(std::make_shared<GameClearStage>(superSign()));
+    } else {
+        superSign()->setStage(std::make_shared<GameWaypointStage>(superSign()));
+    }
 }

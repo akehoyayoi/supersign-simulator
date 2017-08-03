@@ -87,7 +87,7 @@ std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& OpeningStage::si
     if(isStart) {
         animeCount = ++animeCount % startAnime.size();
         if(animeCount == 0){
-            superSign()->setStage(std::make_shared<GameStage>(superSign(), 3));
+            superSign()->setStage(std::make_shared<GameStage>(superSign(), 1));
         }
         return startAnime[animeCount];
     } else {

@@ -16,6 +16,7 @@
 		C12547131F1B4B9000F2600D /* Stage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C125470A1F1B4A3000F2600D /* Stage.cpp */; };
 		C12547141F1B4B9000F2600D /* SuperSign.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C125470B1F1B4A3000F2600D /* SuperSign.cpp */; };
 		C12547151F1B4B9000F2600D /* Taxi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C125470C1F1B4A3000F2600D /* Taxi.cpp */; };
+		C1890A071F3332ED00F0583A /* GameWaypointStage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1890A061F3332ED00F0583A /* GameWaypointStage.cpp */; };
 		C1D510B91F1E26FE0052C403 /* GameClearStage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1D510B81F1E26FE0052C403 /* GameClearStage.cpp */; };
 		C1D510BB1F1E4B860052C403 /* OverlayComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1D510BA1F1E4B860052C403 /* OverlayComponent.cpp */; };
 		C1F8B6521F23174E0038499D /* Explosion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1F8B6511F23174E0038499D /* Explosion.cpp */; };
@@ -74,6 +75,8 @@
 		C125470A1F1B4A3000F2600D /* Stage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Stage.cpp; sourceTree = "<group>"; };
 		C125470B1F1B4A3000F2600D /* SuperSign.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SuperSign.cpp; sourceTree = "<group>"; };
 		C125470C1F1B4A3000F2600D /* Taxi.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Taxi.cpp; sourceTree = "<group>"; };
+		C1890A051F3332C000F0583A /* GameWaypointStage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameWaypointStage.h; sourceTree = "<group>"; };
+		C1890A061F3332ED00F0583A /* GameWaypointStage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameWaypointStage.cpp; sourceTree = "<group>"; };
 		C1D510B71F1E26CC0052C403 /* GameClearStage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameClearStage.h; sourceTree = "<group>"; };
 		C1D510B81F1E26FE0052C403 /* GameClearStage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameClearStage.cpp; sourceTree = "<group>"; };
 		C1D510BA1F1E4B860052C403 /* OverlayComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OverlayComponent.cpp; sourceTree = "<group>"; };
@@ -126,6 +129,7 @@
 				C1F8B6501F2317040038499D /* Explosion.h */,
 				C1D510B71F1E26CC0052C403 /* GameClearStage.h */,
 				C12546FC1F1B4A2400F2600D /* GameOverStage.h */,
+				C1890A051F3332C000F0583A /* GameWaypointStage.h */,
 				C12546FD1F1B4A2400F2600D /* GameStage.h */,
 				C1F8B6531F235C7F0038499D /* Gauge.h */,
 				C12546FE1F1B4A2400F2600D /* OpeningStage.h */,
@@ -146,6 +150,7 @@
 				C1F8B6511F23174E0038499D /* Explosion.cpp */,
 				C1D510B81F1E26FE0052C403 /* GameClearStage.cpp */,
 				C12547071F1B4A3000F2600D /* GameOverStage.cpp */,
+				C1890A061F3332ED00F0583A /* GameWaypointStage.cpp */,
 				C12547081F1B4A3000F2600D /* GameStage.cpp */,
 				C1F8B6541F235CCF0038499D /* Gauge.cpp */,
 				C12547091F1B4A3000F2600D /* OpeningStage.cpp */,
@@ -309,6 +314,7 @@
 				C125470E1F1B4B9000F2600D /* data.cpp in Sources */,
 				C12547131F1B4B9000F2600D /* Stage.cpp in Sources */,
 				C1D510BB1F1E4B860052C403 /* OverlayComponent.cpp in Sources */,
+				C1890A071F3332ED00F0583A /* GameWaypointStage.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
