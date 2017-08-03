@@ -24,7 +24,7 @@ private:
     void gameClear();
     bool inGame;
 public:
-    GameStage(SuperSign* _superSign);
+    GameStage(SuperSign* _superSign, int difficulty);
     virtual void input(int key);
     virtual std::array<std::array<DisplayInfo, windowWidth>, windowHeight>& simulate();
 };

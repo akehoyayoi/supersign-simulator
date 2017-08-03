@@ -95,15 +95,16 @@ std::array<std::array<DisplayInfo, windowWidth>, windowHeight> b4 = {{
 
 std::array<std::array<std::array<DisplayInfo, windowWidth>, windowHeight>, 4> backgroudAnime = {b1,b2,b3,b4};
 
-GameStage::GameStage(SuperSign* _superSign)
+GameStage::GameStage(SuperSign* _superSign, int difficulty)
 : Stage(_superSign)
 , animeCount(0)
 , inGame(true)
 {
     overlays.push_back(std::make_shared<Taxi>());
-    overlays.push_back(std::make_shared<Enemy>(0, 10));
-    overlays.push_back(std::make_shared<Enemy>(10, 10));
-    overlays.push_back(std::make_shared<Enemy>(20, 10));
+    const auto base = 32 / difficulty;
+    for(auto count = 0; count < difficulty; count++) {
+        overlays.push_back(std::make_shared<Enemy>(count * base, base));
+    }
     std::function<void()> funcGameClear = std::bind(&GameStage::gameClear, this);
     overlays.push_back(std::make_shared<Gauge>(funcGameClear));
 };
